@@ -1,0 +1,79 @@
+header {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+bar {
+  width: 90%;
+  height: .25em;
+  margin: auto;
+  border-radius: 1em;
+  display: block;
+  background-color: #ababab;
+  animation-name: magic;
+  animation-duration: 1s;
+}
+
+@keyframes magic {
+  from {
+    width: 0;
+  }
+}
+
+.skill {
+  max-width: 15em;
+  display: block;
+  margin: auto;
+}
+
+.skill-name {
+  display: inline-block;
+  font-weight: bold;
+}
+
+.skill-value {
+  margin-top: .5em;
+  display: inline-block;
+  float: right;
+}
+
+.one {
+  background-color: red;
+  width: 10%;
+}
+.two {
+  background-color: orange;
+  width: 20%;
+}
+.three {
+  background-color: grey;
+  width: 30%;
+}
+.four {
+  background-color: green;
+  width: 40%;
+}
+
+section {
+  padding: 1em;
+}
+
+.container {
+  max-width: 30em;
+  margin: auto;
+}
+
+section header {
+  font-size: 1.25em;
+  font-weight: bold;
+  margin: 1em 0;
+}
+
+p {
+  text-align: justify;
+}
+
+.light {
+  color: #707070;
+}
