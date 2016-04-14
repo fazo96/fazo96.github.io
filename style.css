@@ -21,6 +21,15 @@ bar {
   }
 }
 
+@keyframs myFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
 .skill {
   max-width: 15em;
   display: block;
@@ -55,13 +64,23 @@ bar {
   width: 40%;
 }
 
+.sections {
+  text-align: center;
+}
+
 section {
+  display: inline-block;
   padding: 1em;
+  max-width: 30em;
+  vertical-align: top;
+  animation-name: myFade;
+  animation-duration: 1s;
 }
 
 .container {
-  max-width: 30em;
   margin: auto;
+  margin-top: 1.5em;
+  max-width: 100em;
 }
 
 section header {
@@ -74,6 +93,87 @@ p {
   text-align: justify;
 }
 
+.project-body {
+  text-align: justify;
+}
+
+.clean {
+  text-decoration: none;
+}
+
+.clean:hover {
+  text-decoration: none;
+}
+
 .light {
   color: #707070;
+}
+
+#projects {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#skills {
+  text-align: left;
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.project {
+  display: inline-block;
+  border: solid .1em #ababab;
+  padding: 1em;
+  border-radius: .5em;
+  margin: 1em;
+}
+
+.project-title {
+  /*border-bottom: solid .1em #ababab;*/
+  padding-bottom: .25em;
+  margin-bottom: .25em;
+  font-weight: bold;
+}
+
+.project-buttons {
+  padding-top: .25em;
+  margin-top: .25em;
+}
+/*
+a.button {
+  text-decoration: none;
+  color: #0a0a0a;
+  border: solid .1em #ababab;
+  border-radius: .5em;
+  padding: .25em .5em;
+  transition: all .5s ease;
+}
+
+a.button:hover {
+  color: white;
+  background-color: #ababab;
+  border-color: white;
+}*/
+
+.button {
+  text-decoration: none;
+  color: #0a0a0a;
+  display: inline-block;
+  background-color: white;
+  border: solid .1em #ababab;
+  border-radius: .5em;
+  padding: .25em 1em;
+  transition: all .1s linear;
+}
+
+.button:hover {
+  background-color: #dedede;
+}
+
+.button:active {
+  border-color: #dedede;
+  background-color: #a1a1a1;
+  color: white;
 }
