@@ -1,3 +1,7 @@
+* {
+  font-family: Roboto, sans-serif;
+}
+
 header {
   display: block;
   width: 100%;
@@ -28,6 +32,13 @@ bar {
   to {
     opacity: 100%;
   }
+}
+
+img[name="avatar"] {
+  border-radius: 1em;
+  max-width: 12em;
+  display: block;
+  margin: auto;
 }
 
 .skill {

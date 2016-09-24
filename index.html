@@ -5,25 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Enrico Fasoli">
     <meta content="My personal website">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
   <script src="script.js"></script>
     <div class="container">
       <header>
+        <!--<img name="avatar" src="https://avatars3.githubusercontent.com/u/2546805?v=3&s=466">-->
         <h1>Enrico Fasoli</h1>
-        <h3>
-          <a class="clean light" href="https://github.com/fazo96" target="_vblank">@fazo96</a>
-        </h3>
+        <h3><a class="clean light" href="https://github.com/fazo96" target="_vblank">@fazo96</a></h3>
         <bar class="magic"/>
       </header>
       <div class="sections">
         <section>
           <header>About Me</header>
           <p>Hi, I'm a student from Crema, Italy. Ever since I was a kid,
-            I've been passionate about computers and programming,
-            and after graduating from high school, I'm continuing my studies at
-            the Università degli Studi di Milano sede di Crema.</p>
+            I've been passionate about computers and programming.
+            After graduating from high school, I'm continuing my studies at
+            the Università degli Studi di Milano sede di Crema while working
+            part-time in the field to grow personally and professionally.</p>
         </section>
         <section>
           <a name="projects"></a>
@@ -34,6 +35,18 @@
           but you can click Expand to show my best ones.</p>
           <button class="button" onClick="toggle('projects')">Expand</button>
           <div id="projects">
+            <div class="project">
+              <div class="project-title">
+                WebLC2
+              </div>
+              <div class="project-body">
+                An offline-capable web application that provides a full integrated developer environment for writing and running LC-2 Assembly software.
+                Uses my custom javascript implementation for assembling binaries and emulating virtual LC-2 computers.
+              </div>
+              <div class="project-buttons">and
+                <a class="button" href="http://fazo96.github.io/WebLC2" target="_vblank">Try</a>
+              </div>
+            </div>
             <div class="project">
               <div class="project-title">
                 NoChain
@@ -86,10 +99,10 @@
         <section>
           <a name="skills"></a>
           <header>Skills</header>
-          <p>I've built all kinds of software, but mostly high level applications
+          <p>I've built various kinds of software, but mostly high level applications
             with networking and moderately complex algorithms.</p>
-          <p>I've also worked in groups and managed projects in scholastic
-            environments.</p>
+          <p>I've also worked in teams, handled production and development environments,
+            and mentored students in school/university.</p>
           <button class="button" onClick="toggle('skills')">Expand</button>
           <div id="skills">
             <h4>Roles</h4>
@@ -98,12 +111,12 @@
               <bar class="skill-value four" />
             </div>
             <div class="skill">
-              <div class="skill-name">Teamworker</div>
-              <bar class="skill-value four" />
+              <div class="skill-name">DevOps</div>
+              <bar class="skill-value three" />
             </div>
             <div class="skill">
-              <div class="skill-name">Project Manager</div>
-              <bar class="skill-value three" />
+              <div class="skill-name">Operations</div>
+              <bar class="skill-value two" />
             </div>
             <div class="skill">
               <div class="skill-name">UX/UI Design</div>
@@ -112,6 +125,18 @@
             <h4>Languages</h4>
             <div class="skill">
               <div class="skill-name">Java</div>
+              <bar class="skill-value four" />
+            </div>
+            <div class="skill">
+              <div class="skill-name">PHP</div>
+              <bar class="skill-value four" />
+            </div>
+            <div class="skill">
+              <div class="skill-name">JavaScript (ES5/6)</div>
+              <bar class="skill-value four" />
+            </div>
+            <div class="skill">
+              <div class="skill-name">CoffeeScript</div>
               <bar class="skill-value four" />
             </div>
             <div class="skill">
@@ -144,14 +169,6 @@
               <bar class="skill-value four" />
             </div>
             <div class="skill">
-              <div class="skill-name">JavaScript</div>
-              <bar class="skill-value four" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">CoffeeScript</div>
-              <bar class="skill-value four" />
-            </div>
-            <div class="skill">
               <div class="skill-name">React</div>
               <bar class="skill-value four" />
             </div>
@@ -161,7 +178,11 @@
             </div>
             <div class="skill">
               <div class="skill-name">Flask</div>
-              <bar class="skill-value three" />
+              <bar class="skill-value two" />
+            </div>
+            <div class="skill">
+              <div class="skill-name">Restful API Design</div>
+              <bar class="skill-value four" />
             </div>
             <h4>Tools and Software</h4>
             <div class="skill">
@@ -173,8 +194,20 @@
               <bar class="skill-value four" />
             </div>
             <div class="skill">
+              <div class="skill-name">WebStorm</div>
+              <bar class="skill-value four" />
+            </div>
+            <div class="skill">
               <div class="skill-name">Eclipse</div>
               <bar class="skill-value one" />
+            </div>
+            <div class="skill">
+              <div class="skill-name">Vagrant</div>
+              <bar class="skill-value three" />
+            </div>
+            <div class="skill">
+              <div class="skill-name">Docker</div>
+              <bar class="skill-value two" />
             </div>
             <h4>Computer Networks</h4>
             <div class="skill">
@@ -186,8 +219,8 @@
               <bar class="skill-value three" />
             </div>
             <div class="skill">
-              <div class="skill-name">Protocol Building</div>
-              <bar class="skill-value three" />
+              <div class="skill-name">Custom Protocol Design</div>
+              <bar class="skill-value two" />
             </div>
             <h4>Server Side / Sysadmin</h4>
             <div class="skill">
@@ -208,7 +241,7 @@
             </div>
             <div class="skill">
               <div class="skill-name">Windows Server</div>
-              <bar class="skill-value two" />
+              <bar class="skill-value one" />
             </div>
           </div>
         </section>
