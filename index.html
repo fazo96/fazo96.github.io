@@ -1,257 +1,393 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Enrico Fasoli</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="Enrico Fasoli">
-    <meta content="My personal website">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-  <script src="script.js"></script>
-    <div class="container">
-      <header>
-        <!--<img name="avatar" src="https://avatars3.githubusercontent.com/u/2546805?v=3&s=466">-->
-        <h1>Enrico Fasoli</h1>
-        <h3><a class="clean light" href="https://github.com/fazo96" target="_vblank">@fazo96</a></h3>
-        <bar class="magic"/>
-      </header>
-      <div class="sections">
-        <section>
-          <header>About Me</header>
-          <p>Hi, I'm a student from Crema, Italy. Ever since I was a kid,
-            I've been passionate about computers and programming.
-            After graduating from high school, I'm continuing my studies at
-            the Università degli Studi di Milano sede di Crema while working
-            part-time in the field to grow personally and professionally.</p>
-        </section>
-        <section>
-          <a name="projects"></a>
-          <header>Projects</header>
-          <p>I dedicate a lot of free time to hobby project, built passionately to
-            learn or deepen my knowledge in the topics that interest me the most.</p>
-          <p>I publish most of them on <a href="https://github.com/fazo96">my GitHub Profile</a>,
-          but you can click Expand to show my best ones.</p>
-          <button class="button" onClick="toggle('projects')">Expand</button>
-          <div id="projects">
-            <div class="project">
-              <div class="project-title">
-                WebLC2
-              </div>
-              <div class="project-body">
-                An offline-capable web application that provides a full integrated developer environment for writing and running LC-2 Assembly software.
-                Uses my custom javascript implementation for assembling binaries and emulating virtual LC-2 computers.
-              </div>
-              <div class="project-buttons">and
-                <a class="button" href="http://fazo96.github.io/WebLC2" target="_vblank">Try</a>
-              </div>
-            </div>
-            <div class="project">
-              <div class="project-title">
-                NoChain
-              </div>
-              <div class="project-body">
-                A password manager that doesn't store any data and works offline in any modern browser.
-              </div>
-              <div class="project-buttons">
-                <a class="button" href="http://fazo96.github.io/nochain" target="_vblank">Try</a>
-              </div>
-            </div>
-            <div class="project">
-              <div class="project-title">
-                Boards
-              </div>
-              <div class="project-body">
-                A social content sharing platform built on state of the art distributed network protocols. It runs
-                in all modern browsers and requires no servers to function, even offline.
-              </div>
-              <div class="project-buttons">
-                <a class="button" href="http://boards.ydns.eu" target="_vblank">Try</a>
-              </div>
-            </div>
-            <div class="project">
-              <div class="project-title">
-                PBS Wizard
-              </div>
-              <div class="project-body">
-                A simple Project Management web application. It can draw charts and estimate allowed delays.
-              </div>
-              <div class="project-buttons">
-                <a class="button" href="http://fazo96.github.io/pbs" target="_vblank">Try</a>
-              </div>
-            </div>
-            <div class="project">
-              <div class="project-title">
-                Airium
-              </div>
-              <div class="project-body">
-                A machine learning simulation where small creatures learn to survive in a simple
-                environment. It uses feedforward neural networks and genetic algorithm. Built using
-                Java.
-              </div>
-              <div class="project-buttons">
-                <a class="button" href="http://github.com/fazo96/AIrium" target="_vblank">View</a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section>
-          <a name="skills"></a>
-          <header>Skills</header>
-          <p>I've built various kinds of software, but mostly high level applications
-            with networking and moderately complex algorithms.</p>
-          <p>I've also worked in teams, handled production and development environments,
-            and mentored students in school/university.</p>
-          <button class="button" onClick="toggle('skills')">Expand</button>
-          <div id="skills">
-            <h4>Roles</h4>
-            <div class="skill">
-              <div class="skill-name">Developer</div>
-              <bar class="skill-value four" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">DevOps</div>
-              <bar class="skill-value three" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">Operations</div>
-              <bar class="skill-value two" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">UX/UI Design</div>
-              <bar class="skill-value one" />
-            </div>
-            <h4>Languages</h4>
-            <div class="skill">
-              <div class="skill-name">Java</div>
-              <bar class="skill-value four" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">PHP</div>
-              <bar class="skill-value four" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">JavaScript (ES5/6)</div>
-              <bar class="skill-value four" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">CoffeeScript</div>
-              <bar class="skill-value four" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">Python</div>
-              <bar class="skill-value four" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">C</div>
-              <bar class="skill-value three" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">Haskell</div>
-              <bar class="skill-value two" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">Rust</div>
-              <bar class="skill-value two" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">Go</div>
-              <bar class="skill-value one" />
-            </div>
-            <h4>Web Related</h4>
-            <div class="skill">
-              <div class="skill-name">Node.js</div>
-              <bar class="skill-value four" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">HTML/CSS</div>
-              <bar class="skill-value four" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">React</div>
-              <bar class="skill-value four" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">Angular</div>
-              <bar class="skill-value three" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">Flask</div>
-              <bar class="skill-value two" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">Restful API Design</div>
-              <bar class="skill-value four" />
-            </div>
-            <h4>Tools and Software</h4>
-            <div class="skill">
-              <div class="skill-name">Git</div>
-              <bar class="skill-value four" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">NetBeans</div>
-              <bar class="skill-value four" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">WebStorm</div>
-              <bar class="skill-value four" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">Eclipse</div>
-              <bar class="skill-value one" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">Vagrant</div>
-              <bar class="skill-value three" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">Docker</div>
-              <bar class="skill-value two" />
-            </div>
-            <h4>Computer Networks</h4>
-            <div class="skill">
-              <div class="skill-name">HTTP</div>
-              <bar class="skill-value four" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">TCP/UDP</div>
-              <bar class="skill-value three" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">Custom Protocol Design</div>
-              <bar class="skill-value two" />
-            </div>
-            <h4>Server Side / Sysadmin</h4>
-            <div class="skill">
-              <div class="skill-name">GNU/Linux</div>
-              <bar class="skill-value four" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">Bash</div>
-              <bar class="skill-value four" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">Bash Scripting</div>
-              <bar class="skill-value four" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">iptables</div>
-              <bar class="skill-value two" />
-            </div>
-            <div class="skill">
-              <div class="skill-name">Windows Server</div>
-              <bar class="skill-value one" />
-            </div>
-          </div>
-        </section>
-        <section>
-          <a name="contact"></a>
-          <header>Contact Me</header>
-          <p class="center">Feel free to drop me an email at enrico dot fasoli
-            followed by my birthyear (1996) at gmail dot com.</p>
-        </section>
-      </div>
-    </div>
-  </body>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Enrico Fasoli</title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic'
+        rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <style>
+            html, body, main, section, header, ul, p, h1, h2, h3 {
+              font-family: 'Open Sans', 'sans-serif';
+              font-size: 14px;
+              line-height: 1.4;
+              margin: 0; padding: 0;
+              display: block;
+            }
+            
+            ::selection {
+              color: #fff;
+              background: #e48a8a; /* WebKit/Blink Browsers */
+            }
+            ::-moz-selection {
+              color: #fff;
+              background: #e48a8a; /* Gecko Browsers */
+            }
+            
+            p::selection {
+              color: #fff;
+            }
+            
+            a {
+              color: #C00000;
+              text-decoration: none;
+            }
+            
+            a:visited {
+              color: #7B0796;
+            }
+            
+            a:hover {
+              text-decoration: underline;
+            }
+            
+            h1 {
+              text-transform: uppercase;
+              font-size:
+            }
+            
+            h2 {
+              text-transform: uppercase;
+              color: #898989;
+              font-size: 2em;
+              position: relative;
+              font-weight: 400;
+            }
+            
+            h3, .tenure {
+              font-size: 1.5em;
+              font-weight: 400;
+            }
+            
+            h3 {
+              margin-top: 0;
+              margin-bottom: 5px;
+              /*width: 85%;*/
+              float: left;
+            }
+            
+            table {
+              width: 100%;
+              text-transform: uppercase;
+            }
+            
+            td:first-child {
+              letter-spacing: 2px;
+              color: #bd5b5b;
+              font-size: 20px;
+            }
+            
+            td:last-child {
+              text-align: justify; /* HTML justification sucks, but in this case... */
+            }
+            
+            hr {
+              display: none;
+            }
+            
+            main {
+              padding: 15px;
+              max-width: 800px;
+              margin: 0 auto;
+            }
+            
+            section {
+              margin-top: 2em;
+            }
+            
+            section > div {
+              margin-top: 2em;
+              overflow: hidden; /* Clear floated children */
+            }
+            
+            section > div p {
+              clear: both;
+            }
+            
+            section > header {
+              position: relative;
+            }
+            
+            p + ul {
+              margin: 1em;
+            }
+            
+            ul {
+              clear: both;
+            }
+            
+            li {
+              margin-left: 2em;
+            }
+            
+            p, li {
+              text-align: justify;
+            }
+            
+            .tenure {
+              float: right;
+              color: #6F6F6F;
+              background-color: #F5F5F5;
+              border-radius: 6px;
+              padding: 4px 6px;
+              font-size: 85%;
+              font-weight: 600;
+              margin-top: 3px;
+            }
+            
+            .location {
+              border: #e2aaaa dashed 1px;
+              background-color: #ffffff;
+              padding: 3px 6px;
+              border-radius: 6px;
+              float: right;
+              margin-right: 5px;
+              float: right;
+              font-size: 85%;
+              color: #717171;
+              font-weight: 600;
+              margin-top: 3px;
+            }
+            
+            span.keywords {
+              font-size: 12px;
+              color: #B16666;
+            }
+            
+            thead {
+              display: none;
+            }
+            
+            main > header {
+              width: 100%;
+              float: left;
+              margin-bottom: 1em;
+            }
+            
+            h1 {
+              float: left;
+            }
+            
+            h1, h2, .label {
+              font-size: 2.5em;
+              text-transform: uppercase;
+              font-weight: 300;
+              font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Lato', 'sans-serif'
+            }
+            
+            #contact {
+             clear: both;
+             float: right;
+             margin-top: 2px;
+            }
+            
+            #contact span + span {
+              margin-left: 10px;
+            }
+            
+            header > span.fa {
+              text-align: center;
+              margin-right: 3px;
+              position: absolute;
+              width: 40px;
+              top: 14px;
+              font-size: 30px;
+              /*transform: translateX(-110%); PDF no likey */
+              margin-left: -50px;
+              color: #DADADA;
+            }
+            
+            .label {
+              float: right;
+              color: #DADADA;
+            }
+            
+            #summary {
+              color: #717171;
+              font-size: 1.25em;
+              margin-top: 6em;
+            }
+            
+            #skills td {
+              padding-top: 7px;
+              padding-bottom: 7px;
+            }
+            
+            #references > p, #references > p > a {
+              color: #961e1e;
+              text-align: center;
+              margin: 30px;
+              font-weight: bold;
+              letter-spacing: 2px;
+              text-transform: uppercase;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <main>
+            <header>
+                 <h1>Enrico <span style="color: #C00000;">Fasoli</span></h1> <span class="label">Full-Stack Web Developer</span>
+                <p id="contact"> <span class="email"><a href="mailto:enrico.fasoli1996@gmail.com">enrico.fasoli1996@gmail.com</a></span>
+                    <span
+                    class="phone">3458432293</span>
+                </p>
+            </header>
+            <section id="summary">Expert Full-Stack Web Developer focused on SaaS Web Applications
+                <br>I work from home with my two cats :)</section>
+            <hr>
+            <section id="skills">
+                <header> <span class="fa fa-lg fa-code"></span> 
+                     <h2>skills</h2>
+
+                </header>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Skill</th>
+                            <th>Keywords</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="width: 25%;">Languages</td>
+                            <td class="keywords">JavaScript/ES6 Ruby Python Java PHP HTML CSS</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 25%;">Backend</td>
+                            <td class="keywords">Rails Node.js Express.js Flask</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 25%;">Frontend</td>
+                            <td class="keywords">React Vue Backbone.js Webpack Babel</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 25%;">Databases</td>
+                            <td class="keywords">SQL (PostgreSQL Preferred) MongoDB RethinkDB</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 25%;">Cloud</td>
+                            <td class="keywords">AWS (Lambda, S3, Beanstalk, EC2, CloudFront)</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 25%;">DevOps</td>
+                            <td class="keywords">Linux Docker Bash Git</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <hr>
+            <section id="employment">
+                <header> <span class="fa fa-lg fa-building"></span> 
+                     <h2>employment</h2>
+
+                </header>
+                <div>
+                     <h3><em>Web Engineer</em>,
+
+              <a href="https://flexhire.com">Flexhire</a>
+
+              </h3> <span class="tenure">2018-10 — Present</span>
+                    <p>
+                        <p>Full Time Remote position for development of the Flexhire SaaS platform,
+                            part of a small team</p>
+                    </p>
+                    <ul>
+                        <li>Designed and directed the implementation of technical solutions to business
+                            problems</li>
+                        <li>Implemented end-to-end testing system for the SaaS platform</li>
+                        <li>Delivered substantial performance improvements during the transition from
+                            startup prototype to full product</li>
+                        <li>Upgraded and consolidated the DevOps systems of Flexhire using AWS tools,
+                            including new CI and CD pipelines</li>
+                    </ul>
+                </div>
+                <div>
+                     <h3><em>Web Engineer</em>,
+
+              <a href="https://chlu.io">Chlu</a>
+
+              </h3> <span class="tenure">2017-11 — 2018-10</span>
+                    <p>
+                        <p>Part Time Remote position, focused on directing the technical implementation
+                            of the Chlu protocol and applications</p>
+                    </p>
+                    <ul>
+                        <li>Designed IPFS/libp2p based distributed systems running in the Browser
+                            through Websockets and WebRTC</li>
+                        <li>Managed the Open Source codebase of the Chlu platform</li>
+                    </ul>
+                </div>
+                <div>
+                     <h3><em>Software Developer</em>,
+
+              <a href="http://esconsulting.it">ESC</a>
+
+              </h3> <span class="tenure">2016-09 — 2018-01</span>
+                    <p>
+                        <p>Part Time position, in a local company. Worked in a team of developers
+                            to deliver specialized applications to clients</p>
+                    </p>
+                    <ul>
+                        <li>Worked Full Stack with PostgreSQL, PHP, Backbone.js, Marionette.js, Bootstrap</li>
+                        <li>Implemented and deployed custom management software following specifications
+                            from clients</li>
+                    </ul>
+                </div>
+            </section>
+            <hr>
+            <section id="projects">
+                <header> <span class="fa fa-lg fa-star"></span> 
+                     <h2>projects</h2>
+
+                </header>
+                <div>
+                     <h3><em>Speaker</em>,
+          <a href="https://cremaweb.org">CremaWeb</a>
+          </h3>
+ <span class="tenure">2018-10 — Present</span>
+
+                    <p>We started CremaWeb to bring to life the tech community in the town of
+                        Crema (CR).
+                        <br>I am a regular speaker at our monthly meetups.</p> <span class="keywords">Community Meetup </span> 
+                </div>
+                <div>
+                     <h3><em>Author</em>,
+          <a href="https://github.com/fazo96/ipfs-boards">IPFS Boards</a>
+          </h3>
+ <span class="tenure">2015-03 — Present</span>
+
+                    <p>Distributed community discussion platform that runs entirely in the Browser
+                        using IPFS</p> <span class="keywords">JavaScript Node.js IPFS </span> 
+                </div>
+                <div>
+                     <h3><em>Author</em>,
+          <a href="https://github.com/fazo96/ipfs-drive">IPFS Drive</a>
+          </h3>
+ <span class="tenure">2017-10 — Present</span>
+
+                    <p>Distributed File Management and Sharing App that runs entirely in the
+                        Browser using IPFS</p> <span class="keywords">JavaScript Node.js IPFS </span> 
+                </div>
+            </section>
+            <hr>
+            <section id="education">
+                <header> <span class="fa fa-lg fa-mortar-board"></span> 
+                     <h2>education</h2>
+
+                </header>
+                <div>
+                     <h3>Università degli Studi di Milano</h3> <span class="tenure">2015-09 — 2020-01</span>
+                    <p>Network Systems and Security. Currently Paused my studies to focus on
+                        work</p>
+                </div>
+                <div>
+                     <h3>IIS Galileo Galilei Crema</h3> <span class="tenure">2010-01 — 2015-01</span>
+                    <p>High School Diploma, Computer Science. 100/110</p>
+                </div>
+            </section>
+        </main>
+    </body>
+
 </html>

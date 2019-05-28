@@ -1,3 +1,5 @@
-# My Personal Website
+# Curriculum Vitae / Resumé
 
-This is the work in progress personal website I plan on publishing to my domain.
+[View](https://fazo96.github.io)
+
+[Download PDF](https://fazo96.github.io/cv.pdf)
