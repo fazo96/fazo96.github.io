@@ -1,426 +1,590 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
     
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
         <title>Enrico Fasoli</title>
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic'
-        rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet">
         <style>
-            html, body, main, section, header, ul, p, h1, h2, h3 {
-              font-family: 'Open Sans', 'sans-serif';
-              font-size: 14px;
-              line-height: 1.4;
-              margin: 0; padding: 0;
-              display: block;
+            /* Utils */
+            /*----- Colors -----*/
+            /*----- Fonts -----*/
+            /*----- Dimensions and sizes -----*/
+            /* Base */
+            @font-face {
+              font-family: 'Josefin Sans';
+              font-style: normal;
+              font-weight: 300;
+              src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04zwV_pQ1T3xN3K1c3sB361us.ttf) format('truetype');
+            }
+            @font-face {
+              font-family: 'Josefin Sans';
+              font-style: normal;
+              font-weight: 700;
+              src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z306qf9KHRHwsVx7iw5MXmY.ttf) format('truetype');
+            }
+            @font-face {
+              font-family: 'Lato';
+              font-style: normal;
+              font-weight: 300;
+              src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v11/nj47mAZe0mYUIySgfn0wpQ.ttf) format('truetype');
+            }
+            @font-face {
+              font-family: 'Lato';
+              font-style: normal;
+              font-weight: 400;
+              src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/v0SdcGFAl2aezM9Vq_aFTQ.ttf) format('truetype');
+            }
+            @font-face {
+              font-family: 'Lato';
+              font-style: normal;
+              font-weight: 700;
+              src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/DvlFBScY1r-FMtZSYIYoYw.ttf) format('truetype');
+            }
+            @font-face {
+              font-family: 'Lato';
+              font-style: italic;
+              font-weight: 300;
+              src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v11/2HG_tEPiQ4Z6795cGfdivKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+            }
+            @font-face {
+              font-family: 'Lato';
+              font-style: italic;
+              font-weight: 400;
+              src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v11/LqowQDslGv4DmUBAfWa2Vw.ttf) format('truetype');
+            }
+            @font-face {
+              font-family: 'Lato';
+              font-style: italic;
+              font-weight: 700;
+              src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYEKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
             }
             
-            ::selection {
-              color: #fff;
-              background: #e48a8a; /* WebKit/Blink Browsers */
-            }
-            ::-moz-selection {
-              color: #fff;
-              background: #e48a8a; /* Gecko Browsers */
-            }
+            body {
+              font-family: "Lato", Helvetica, Arial, sans-serif;
+              font-weight: 400;
+              background: #f8f8f8;
+              margin: 50px 0 100px;
+              letter-spacing: .3px;
+              color: #39424B; }
             
-            p::selection {
-              color: #fff;
-            }
-            
-            a {
-              color: #C00000;
-              text-decoration: none;
-            }
-            
-            a:visited {
-              color: #7B0796;
-            }
-            
-            a:hover {
-              text-decoration: underline;
-            }
+            h1, h2, h3, h4, h5, h6 {
+              text-transform: uppercase;
+              margin: 0; }
             
             h1 {
-              text-transform: uppercase;
-              font-size:
-            }
+              font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+              font-weight: 700;
+              font-size: 40px;
+              letter-spacing: 1px; }
             
             h2 {
-              text-transform: uppercase;
-              color: #898989;
-              font-size: 2em;
-              position: relative;
-              font-weight: 400;
-            }
-            
-            h3, .tenure {
-              font-size: 1.5em;
-              font-weight: 400;
-            }
+              font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+              font-weight: 300;
+              font-size: 16px;
+              letter-spacing: .5px; }
             
             h3 {
-              margin-top: 0;
-              margin-bottom: 5px;
-              /*width: 85%;*/
-              float: left;
-            }
+              font-family: "Lato", Helvetica, Arial, sans-serif;
+              font-weight: 300;
+              font-size: 14px;
+              letter-spacing: .4px; }
+              h3.bold {
+                font-weight: 700; }
             
-            table {
-              width: 100%;
-              text-transform: uppercase;
-            }
+            h4 {
+              font-family: "Lato", Helvetica, Arial, sans-serif;
+              font-weight: 300;
+              font-size: 12px; }
+              h4.bold {
+                font-weight: 700; }
             
-            td:first-child {
-              letter-spacing: 2px;
-              color: #bd5b5b;
-              font-size: 20px;
-            }
+            h5 {
+              font-family: "Lato", Helvetica, Arial, sans-serif;
+              font-weight: 300;
+              font-size: 11px; }
+              h5.italic {
+                font-style: italic; }
             
-            td:last-child {
-              text-align: justify; /* HTML justification sucks, but in this case... */
-            }
+            h6 {
+              font-family: "Lato", Helvetica, Arial, sans-serif;
+              font-weight: 400;
+              font-size: 10px; }
             
-            hr {
-              display: none;
-            }
+            a {
+              color: inherit;
+              text-decoration: inherit; }
+              a:hover {
+                color: #2895F1; }
+              a .fa-external-link {
+                font-size: 10px;
+                vertical-align: text-top; }
             
-            main {
-              padding: 15px;
-              max-width: 800px;
-              margin: 0 auto;
-            }
+            p,
+            li {
+              font-size: 11px; }
             
-            section {
-              margin-top: 2em;
-            }
+            blockquote {
+              font-size: 11px;
+              font-family: "Lato", Helvetica, Arial, sans-serif;
+              font-weight: 400;
+              font-style: italic;
+              margin: 10px 25px; }
             
-            section > div {
-              margin-top: 2em;
-              overflow: hidden; /* Clear floated children */
-            }
-            
-            section > div p {
-              clear: both;
-            }
-            
-            section > header {
-              position: relative;
-            }
-            
-            p + ul {
-              margin: 1em;
-            }
+            em {
+              color: #999; }
             
             ul {
-              clear: both;
-            }
+              margin: 10px 0 0;
+              -webkit-padding-start: 25px; }
+              ul li {
+                padding-left: 10px; }
+              ul.minimal {
+                list-style: none;
+                padding: 0; }
+                ul.minimal li {
+                  margin-bottom: 3px;
+                  padding-left: 0; }
+              ul.two-column {
+                -webkit-column-count: 2;
+                -webkit-column-gap: 28px;
+                -moz-column-count: 2;
+                     column-count: 2;
+                -moz-column-gap: 28px;
+                     column-gap: 28px; }
+                ul.two-column li {
+                  padding-left: 0; }
             
-            li {
-              margin-left: 2em;
-            }
+            @page {
+              size: A4; }
             
-            p, li {
-              text-align: justify;
-            }
+            .container {
+              padding-top: 20px; }
             
-            .tenure {
-              float: right;
-              color: #6F6F6F;
-              background-color: #F5F5F5;
-              border-radius: 6px;
-              padding: 4px 6px;
-              font-size: 85%;
-              font-weight: 600;
-              margin-top: 3px;
-            }
+            .keyline {
+              width: 45px;
+              margin: 8px 0 10px;
+              border-top: 1px solid #56817A; }
             
-            .location {
-              border: #e2aaaa dashed 1px;
-              background-color: #ffffff;
-              padding: 3px 6px;
-              border-radius: 6px;
-              float: right;
-              margin-right: 5px;
-              float: right;
-              font-size: 85%;
-              color: #717171;
-              font-weight: 600;
-              margin-top: 3px;
-            }
+            .pull-left {
+              float: left; }
             
-            span.keywords {
-              font-size: 12px;
-              color: #B16666;
-            }
+            .pull-right {
+              float: right; }
             
-            thead {
-              display: none;
-            }
+            .clearfix:after {
+              content: "";
+              display: table;
+              clear: both; }
             
-            main > header {
-              width: 100%;
+            .profile-pic {
+              margin-top: -5px;
+              margin-right: 18px; }
+              .profile-pic img {
+                height: 52px;
+                width: 52px;
+                border-radius: 50%;
+                border: 2px solid #56817A; }
+            
+            .summary {
+              margin: 5px 0 5px; }
+            
+            /* Layouts */
+            .page {
+              background: white;
+              width: 612px;
+              min-height: 792px;
+              display: block;
+              margin: 0 auto;
+              border-top: 10px solid #56817A;
+              padding: 36px 22px 30px 34px;
+              box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5); }
+              .page:after {
+                content: "";
+                display: table;
+                clear: both; }
+            
+            .left-column {
               float: left;
-              margin-bottom: 1em;
-            }
+              width: 160px;
+              margin-right: 20px;
+              word-wrap: break-word; }
             
-            h1 {
-              float: left;
-            }
+            .right-column {
+              width: auto;
+              overflow: hidden; }
             
-            h1, h2, .label {
-              font-size: 2.5em;
-              text-transform: uppercase;
-              font-weight: 300;
-              font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Lato', 'sans-serif'
-            }
+            .item {
+              margin-bottom: 15px; }
+              .item:last-child {
+                margin-bottom: 0; }
             
-            #contact {
-             clear: both;
-             float: right;
-             margin-top: 2px;
-            }
+            @media print {
+              body {
+                margin: 0; }
+              .page {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 36px 0 30px;
+                box-shadow: none; }
+                .page .resume-header,
+                .page .resume-content {
+                  padding: 0 22px 0 34px; }
+              .container {
+                page-break-inside: avoid; }
+              .work-container .item {
+                page-break-inside: avoid; }
+              .fa-external-link {
+                display: none; } }
             
-            #contact span + span {
-              margin-left: 10px;
-            }
+            /* Components */
+            .info-tag-container {
+              margin-bottom: 5px; }
+              .info-tag-container .fa {
+                font-size: 14px;
+                width: 12px;
+                margin-right: 5px;
+                text-align: center;
+                vertical-align: middle; }
+                .info-tag-container .fa.fa-map-marker {
+                  font-size: 16px; }
+                .info-tag-container .fa.fa-mobile {
+                  font-size: 18px; }
+                .info-tag-container .fa.fa-envelope-o {
+                  font-size: 12px; }
+                .info-tag-container .fa.fa-desktop {
+                  font-size: 11px; }
+                .info-tag-container .fa.fa-external-link {
+                  width: auto;
+                  font-size: inherit;
+                  vertical-align: text-top; }
+              .info-tag-container .info-text {
+                font-size: 9px;
+                display: inline-block;
+                vertical-align: middle;
+                width: 139px; }
             
-            header > span.fa {
-              text-align: center;
-              margin-right: 3px;
-              position: absolute;
-              width: 40px;
-              top: 14px;
-              font-size: 30px;
-              /*transform: translateX(-110%); PDF no likey */
-              margin-left: -50px;
-              color: #DADADA;
-            }
-            
-            .label {
-              float: right;
-              color: #DADADA;
-            }
-            
-            #summary {
-              color: #717171;
-              font-size: 1.25em;
-              margin-top: 6em;
-            }
-            
-            #skills td {
-              padding-top: 7px;
-              padding-bottom: 7px;
-            }
-            
-            #references > p, #references > p > a {
-              color: #961e1e;
-              text-align: center;
-              margin: 30px;
-              font-weight: bold;
-              letter-spacing: 2px;
-              text-transform: uppercase;
-            }
+            .references-container .fa {
+              font-size: 14px; }
         </style>
     </head>
     
     <body>
-        <main>
-            <header>
-                 <h1>Enrico <span style="color: #C00000;">Fasoli</span></h1> <span class="label">Full-Stack Web Developer</span>
-                <p id="contact"> <span class="email"><a href="mailto:enrico.fasoli1996@gmail.com">enrico.fasoli1996@gmail.com</a></span>
-                </p>
+        <main id="resume" class="page">
+            <header class="resume-header clearfix">
+                <div class="profile-header pull-left">
+                     <h1>Enrico Fasoli</h1>
+
+                     <h2>Full-Stack Software Engineer</h2>
+
+                </div>
+                <div class="profile-pic pull-right">
+                    <img src="foto.jpg" alt="profile-pic">
+                </div>
             </header>
-            <section id="summary">Expert Full-Stack Web Developer focused on SaaS Web Applications
-                <br>I work from home with my two cats :)</section>
-            <hr>
-            <section id="skills">
-                <header> <span class="fa fa-lg fa-code"></span> 
-                     <h2>skills</h2>
+            <div class="resume-content">
+                <aside class="left-column">
+                    <div class="container about-container">
+                        <div class="title">
+                             <h3>About</h3>
 
-                </header>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Skill</th>
-                            <th>Keywords</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="width: 25%;">Languages</td>
-                            <td class="keywords">JavaScript/ES6 Ruby Python Java PHP HTML CSS</td>
-                        </tr>
-                        <tr>
-                            <td style="width: 25%;">Backend</td>
-                            <td class="keywords">Rails Node.js Express.js Flask</td>
-                        </tr>
-                        <tr>
-                            <td style="width: 25%;">Frontend</td>
-                            <td class="keywords">React (Web and Native) Vue Backbone.js Webpack Babel</td>
-                        </tr>
-                        <tr>
-                            <td style="width: 25%;">Databases</td>
-                            <td class="keywords">SQL (PostgreSQL Preferred) MongoDB RethinkDB</td>
-                        </tr>
-                        <tr>
-                            <td style="width: 25%;">Cloud</td>
-                            <td class="keywords">AWS (Lambda, S3, Beanstalk, EC2, CloudFront) Heroku</td>
-                        </tr>
-                        <tr>
-                            <td style="width: 25%;">DevOps</td>
-                            <td class="keywords">Linux Docker Bash Git</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-            <hr>
-            <section id="employment">
-                <header> <span class="fa fa-lg fa-building"></span> 
-                     <h2>employment</h2>
+                            <div class="keyline"></div>
+                        </div>
+                        <div class="info-tag-container"> <i class="fa fa-envelope-o"></i>
 
-                </header>
-                <div>
-                     <h3><em>Freelance</em>,
+                             <h6 class="info-text">enrico.fasoli1996 at gmail</h6>
 
-              Self Employed
+                        </div>
+                        <div class="info-tag-container"> <i class="fa fa-github"></i>
 
-              </h3> <span class="tenure">2018-01 — Present</span>
-                    <p>
-                        <p>Software Engineer work with Web technologies for a variety of clients</p>
-                    </p>
-                    <ul>
-                        <li>Built web and mobile applications focusing on all technical aspects from
-                            infrastructure to frontend</li>
-                        <li>Worked with a variety of local and international clients</li>
-                    </ul>
+                             <h6 class="info-text">
+					                                     <a href="https://github.com/fazo96" target="_blank">
+					                                         fazo96 <i class="fa fa-external-link" aria-hidden="true"></i>
+					                                     </a>
+					                                 </h6>
+
+                        </div>
+                        <div class="info-tag-container"> <i class="fa fa-linkedin"></i>
+
+                             <h6 class="info-text">
+					                                     <a href="https://linkedin.com/in/fazo96" target="_blank">
+					                                         fazo96 <i class="fa fa-external-link" aria-hidden="true"></i>
+					                                     </a>
+					                                 </h6>
+
+                        </div>
+                        </section>
+                        <div class="skills-container">
+                            <section class="container">
+                                <div class="title">
+                                     <h3>Languages</h3>
+
+                                    <div class="keyline"></div>
+                                </div>
+                                <ul class="minimal">
+                                    <li>
+                                        <h6>Typescript</h6>
+                                    </li>
+                                    <li>
+                                        <h6>JavaScript/ES6</h6>
+                                    </li>
+                                    <li>
+                                        <h6>Ruby</h6>
+                                    </li>
+                                    <li>
+                                        <h6>PHP</h6>
+                                    </li>
+                                    <li>
+                                        <h6>HTML</h6>
+                                    </li>
+                                    <li>
+                                        <h6>CSS</h6>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="container">
+                                <div class="title">
+                                     <h3>Backend</h3>
+
+                                    <div class="keyline"></div>
+                                </div>
+                                <ul class="minimal">
+                                    <li>
+                                        <h6>Rails</h6>
+                                    </li>
+                                    <li>
+                                        <h6>Next.js</h6>
+                                    </li>
+                                    <li>
+                                        <h6>Node.js</h6>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="container">
+                                <div class="title">
+                                     <h3>Frontend</h3>
+
+                                    <div class="keyline"></div>
+                                </div>
+                                <ul class="minimal">
+                                    <li>
+                                        <h6>React (Web and Native)</h6>
+                                    </li>
+                                    <li>
+                                        <h6>Vue</h6>
+                                    </li>
+                                    <li>
+                                        <h6>Webpack+Babel</h6>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="container">
+                                <div class="title">
+                                     <h3>Databases</h3>
+
+                                    <div class="keyline"></div>
+                                </div>
+                                <ul class="minimal">
+                                    <li>
+                                        <h6>SQL (PostgreSQL Preferred)</h6>
+                                    </li>
+                                    <li>
+                                        <h6>MongoDB</h6>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="container">
+                                <div class="title">
+                                     <h3>Cloud</h3>
+
+                                    <div class="keyline"></div>
+                                </div>
+                                <ul class="minimal">
+                                    <li>
+                                        <h6>AWS (Lambda, S3, Beanstalk, EC2, CloudFront)</h6>
+                                    </li>
+                                    <li>
+                                        <h6>Heroku</h6>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="container">
+                                <div class="title">
+                                     <h3>DevOps</h3>
+
+                                    <div class="keyline"></div>
+                                </div>
+                                <ul class="minimal">
+                                    <li>
+                                        <h6>Linux</h6>
+                                    </li>
+                                    <li>
+                                        <h6>Docker</h6>
+                                    </li>
+                                    <li>
+                                        <h6>Bash</h6>
+                                    </li>
+                                    <li>
+                                        <h6>Git</h6>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                </aside>
+                <div class="right-column">
+                    <div class="container summary-container">
+                        <div class="title">
+                             <h3>Summary</h3>
+
+                            <div class="keyline"></div>
+                        </div>
+                        <p class="summary">Expert Full-Stack Software Engineer focused on SaaS Web Applications.
+                            I am a problem solver first, and I like being a major contributor or team
+                            leader and taking ownership of the codebase and product across the full
+                            technical stack.</p>
+                    </div>
+                    <div class="container work-container">
+                        <div class="title">
+                             <h3>Experience</h3>
+
+                            <div class="keyline"></div>
+                        </div>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+					                        <a href="https://flexhire.com" target="_blank">
+					                            Flexhire <i class="fa fa-external-link" aria-hidden="true"></i>
+					                        </a>
+					                </h3>
+
+                                 <h5 class="italic pull-right">
+					                        <span class="startDate">10/2019</span>
+					                        <span class="endDate"> - Present</span>
+					                </h5>
+
+                            </div>
+                             <h4>Tech Lead</h4>
+
+                            <p class="summary">Lead position in the tech team of the Flexhire SaaS platform, part of
+                                a small team</p>
+                            <ul>
+                                <li>Designed and directed the implementation of all technical work on the
+                                    product</li>
+                                <li>Incrementally upgraded the tech stack of the product to the latest tech
+                                    practices and to scale with the growing team and product scope</li>
+                                <li>Piloted adoption of Typescript and incrementally replaced the product&#x27;s
+                                    API with a type safe GraphQL API with real time capabilities, also used
+                                    by Flexhire clients to integrate with our product</li>
+                                <li>Delivered substantial performance improvements while directing the transition
+                                    from startup prototype to commercial product</li>
+                                <li>Upgraded and consolidated the Cloud Infrastructure systems of Flexhire
+                                    using AWS tools</li>
+                                <li>Significantly enhanced monitoring, analytics, and backoffice capabilities
+                                    of the platform</li>
+                                <li>Implemented horizontal scaling, infrastructure redundancy, and other fault
+                                    prevention systems</li>
+                            </ul>
+                        </section>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+					                        <a href="https://flexhire.com" target="_blank">
+					                            Flexhire <i class="fa fa-external-link" aria-hidden="true"></i>
+					                        </a>
+					                </h3>
+
+                                 <h5 class="italic pull-right">
+					                        <span class="startDate">10/2018</span>
+					                        <span class="endDate"> - 10/2019</span>
+					                </h5>
+
+                            </div>
+                             <h4>Software Engineer</h4>
+
+                            <p class="summary">Remote hourly contract position for development of the Flexhire SaaS platform,
+                                part of a small team</p>
+                            <ul>
+                                <li>Designed and directed the implementation of technical solutions to business
+                                    problems, both backend and frontend</li>
+                                <li>Implemented end-to-end testing system for the SaaS platform</li>
+                            </ul>
+                        </section>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+					                        <a href="https://archive.is/pmHHO" target="_blank">
+					                            Chlu <i class="fa fa-external-link" aria-hidden="true"></i>
+					                        </a>
+					                </h3>
+
+                                 <h5 class="italic pull-right">
+					                        <span class="startDate">11/2017</span>
+					                        <span class="endDate"> - 10/2018</span>
+					                </h5>
+
+                            </div>
+                             <h4>Software Engineer</h4>
+
+                            <p class="summary">Part Time Remote hourly contract position, focused on directing the technical
+                                implementation of the Chlu protocol and applications</p>
+                            <ul>
+                                <li>Designed IPFS/libp2p based distributed systems running in the Browser
+                                    through Websockets and WebRTC</li>
+                                <li>Managed the Open Source codebase of the Chlu platform</li>
+                            </ul>
+                        </section>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+					                        <a href="http://esconsulting.it" target="_blank">
+					                            ESC <i class="fa fa-external-link" aria-hidden="true"></i>
+					                        </a>
+					                </h3>
+
+                                 <h5 class="italic pull-right">
+					                        <span class="startDate">09/2016</span>
+					                        <span class="endDate"> - 01/2018</span>
+					                </h5>
+
+                            </div>
+                             <h4>Software Developer</h4>
+
+                            <p class="summary">Part Time permanent position, in a local company. Worked in a team of
+                                developers to deliver specialized applications to clients</p>
+                            <ul>
+                                <li>Worked Full Stack with PostgreSQL, PHP, Backbone.js, Marionette.js, Bootstrap</li>
+                                <li>Implemented and deployed custom management software following specifications
+                                    from clients</li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="container education-container">
+                        <div class="title">
+                             <h3>Education</h3>
+
+                            <div class="keyline"></div>
+                        </div>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+					                        IIS Galileo Galilei Crema
+					                </h3>
+
+                                 <h5 class="italic pull-right">
+					                        <span class="startDate">01/2010</span>
+					                        <span class="endDate"> - 01/2015</span>
+					                </h5>
+
+                            </div>
+                             <h4>Diploma Computer Science</h4>
+
+                        </section>
+                    </div>
                 </div>
-                <div>
-                     <h3><em>Tech Lead</em>,
-
-              <a href="https://flexhire.com">Flexhire</a>
-
-              </h3> <span class="tenure">2019-10 — Present</span>
-                    <p>
-                        <p>Lead position in the tech team of the Flexhire SaaS platform, part of
-                            a small team</p>
-                    </p>
-                    <ul>
-                        <li>Designed and directed the implementation of all technical work on the
-                            product</li>
-                        <li>Upgraded the tech stack of the product to the latest tech practices and
-                            to scale with the growing team and product scope</li>
-                        <li>Delivered substantial performance improvements while directing the transition
-                            from startup prototype to commercial product</li>
-                        <li>Upgraded and consolidated the Cloud Infrastructure systems of Flexhire
-                            using AWS tools</li>
-                        <li>Significantly enhanced monitoring, analytics, and backoffice capabilities
-                            of the platform</li>
-                        <li>Implemented horizontal scaling, infrastructure redundancy, and other fault
-                            prevention systems</li>
-                    </ul>
                 </div>
-                <div>
-                     <h3><em>Software Engineer</em>,
-
-              <a href="https://flexhire.com">Flexhire</a>
-
-              </h3> <span class="tenure">2018-10 — 2019-10</span>
-                    <p>
-                        <p>Remote position for development of the Flexhire SaaS platform, part of
-                            a small team</p>
-                    </p>
-                    <ul>
-                        <li>Designed and directed the implementation of technical solutions to business
-                            problems, both backend and frontend</li>
-                        <li>Implemented end-to-end testing system for the SaaS platform</li>
-                    </ul>
-                </div>
-                <div>
-                     <h3><em>Software Engineer</em>,
-
-              <a href="https://chlu.io">Chlu</a>
-
-              </h3> <span class="tenure">2017-11 — 2018-10</span>
-                    <p>
-                        <p>Part Time Remote position, focused on directing the technical implementation
-                            of the Chlu protocol and applications</p>
-                    </p>
-                    <ul>
-                        <li>Designed IPFS/libp2p based distributed systems running in the Browser
-                            through Websockets and WebRTC</li>
-                        <li>Managed the Open Source codebase of the Chlu platform</li>
-                    </ul>
-                </div>
-                <div>
-                     <h3><em>Software Developer</em>,
-
-              <a href="http://esconsulting.it">ESC</a>
-
-              </h3> <span class="tenure">2016-09 — 2018-01</span>
-                    <p>
-                        <p>Part Time position, in a local company. Worked in a team of developers
-                            to deliver specialized applications to clients</p>
-                    </p>
-                    <ul>
-                        <li>Worked Full Stack with PostgreSQL, PHP, Backbone.js, Marionette.js, Bootstrap</li>
-                        <li>Implemented and deployed custom management software following specifications
-                            from clients</li>
-                    </ul>
-                </div>
-            </section>
-            <hr>
-            <section id="projects">
-                <header> <span class="fa fa-lg fa-star"></span> 
-                     <h2>projects</h2>
-
-                </header>
-                <div>
-                     <h3><em>Speaker</em>,
-          <a href="https://cremaweb.org">CremaWeb</a>
-          </h3>
- <span class="tenure">2018-10 — Present</span>
-
-                    <p>We started CremaWeb to bring to life the tech community in the town of
-                        Crema (CR).
-                        <br>I am a regular speaker at our monthly meetups.</p> <span class="keywords">Community Meetup </span> 
-                </div>
-                <div>
-                     <h3><em>Author</em>,
-          <a href="https://github.com/fazo96/ipfs-boards">IPFS Boards</a>
-          </h3>
- <span class="tenure">2015-03 — Present</span>
-
-                    <p>Distributed community discussion platform that runs entirely in the Browser
-                        using IPFS</p> <span class="keywords">JavaScript Node.js IPFS </span> 
-                </div>
-                <div>
-                     <h3><em>Author</em>,
-          <a href="https://github.com/fazo96/ipfs-drive">IPFS Drive</a>
-          </h3>
- <span class="tenure">2017-10 — Present</span>
-
-                    <p>Distributed File Management and Sharing App that runs entirely in the
-                        Browser using IPFS</p> <span class="keywords">JavaScript Node.js IPFS </span> 
-                </div>
-            </section>
-            <hr>
-            <section id="education">
-                <header> <span class="fa fa-lg fa-mortar-board"></span> 
-                     <h2>education</h2>
-
-                </header>
-                <div>
-                     <h3>Università degli Studi di Milano</h3> <span class="tenure">2015-09 — 2020-01</span>
-                    <p>Network Systems and Security. Currently Paused my studies to focus on
-                        work</p>
-                </div>
-                <div>
-                     <h3>IIS Galileo Galilei Crema</h3> <span class="tenure">2010-01 — 2015-01</span>
-                    <p>High School Diploma, Computer Science. 100/110</p>
-                </div>
-            </section>
         </main>
     </body>
 
